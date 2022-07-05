@@ -1,0 +1,14 @@
+local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/jakepscripts/moonlib/main/moonlibv1.lua'))() 
+local main = library:CreateWindow("Grab Level Sword", "#19cf83", 9160626035)
+
+main:CreateTab("Home")
+
+main:CreateLabel("Thing", "Home")
+
+main:CreateButton("Button", "Home", function()
+print('btn')
+end)
+
+main:CreateToggle("Toggle", "Home", function(togglestate)
+    print(togglestate)
+end)
