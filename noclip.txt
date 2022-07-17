@@ -24,7 +24,7 @@ local args = {
 }
 
 wait(3)
-
+print("teleport")
 game:GetService("ReplicatedStorage").Events.ToMap:FireServer(unpack(args))
 
 while true do
