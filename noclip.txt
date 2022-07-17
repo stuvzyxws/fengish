@@ -1,3 +1,5 @@
+local vu = game:GetService("VirtualUser")
+
 local bruh = Instance.new('Part', game.Workspace)
 bruh.Name = "bruh"
 bruh.Size = Vector3.new(6,.1,6)
@@ -11,6 +13,19 @@ local character = player.Character or player.CharacterAdded:Wait()
 plr = game.Players.LocalPlayer
 mouse = plr:GetMouse()
 mouse.KeyDown:connect(function(key)
+
+local name = game.Players.LocalPlayer.Name
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Data[name].Stats,
+    [2] = workspace:FindFirstChild(name.."'s Base"),
+    [3] = name,
+    [4] = "Icy Planes"
+}
+
+wait(3)
+
+game:GetService("ReplicatedStorage").Events.ToMap:FireServer(unpack(args))
 
 while true do
     player = game.Players.LocalPlayer
@@ -27,7 +42,7 @@ while true do
     end
     
     bruh.CFrame = game.Players.LocalPlayer.Character.LeftFoot.CFrame + Vector3.new(0,(-game.Players.LocalPlayer.Character.LeftFoot.Size.Y/2) - .05,0)
-
+    vu:ClickButton1(Vector2.new(), game.Workspace.CurrentCamera.CFrame)
     game:GetService("RunService").Stepped:wait()
 end
 
