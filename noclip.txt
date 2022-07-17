@@ -14,19 +14,6 @@ plr = game.Players.LocalPlayer
 mouse = plr:GetMouse()
 mouse.KeyDown:connect(function(key)
 
-local name = game.Players.LocalPlayer.Name
-
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Data[name].Stats,
-    [2] = workspace:FindFirstChild(name.."'s Base"),
-    [3] = name,
-    [4] = "Icy Planes"
-}
-
-wait(3)
-print("teleport")
-game:GetService("ReplicatedStorage").Events.ToMap:FireServer(unpack(args))
-
 while true do
     player = game.Players.LocalPlayer
     character = player.Character
