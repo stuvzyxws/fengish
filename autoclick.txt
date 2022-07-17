@@ -1,4 +1,3 @@
 while wait(.25) do
-    local vu = game:GetService("VirtualUser")
-    vu:ClickButton1(Vector2.new(), game.Workspace.CurrentCamera.CFrame)
+    game.Players.LocalPlayer.Character.Sword:Activate()
 end
