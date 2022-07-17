@@ -1,6 +1,4 @@
-local VirtualInputManager = game:GetService("VirtualInputManager")
-
-while wait(.1) do
-  VirtualInputManager:SendMouseButtonEvent(0, 0, 0, true, game, 1)
-  VirtualInputManager:SendMouseButtonEvent(0, 0, 0, false, game, 1)
+while wait(.25) do
+    local vu = game:GetService("VirtualUser")
+    vu:ClickButton1(Vector2.new(), game.Workspace.CurrentCamera.CFrame)
 end
