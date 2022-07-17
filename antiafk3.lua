@@ -1,4 +1,3 @@
-wait(30)
 print("Anti afk loaded")
 local VirtualUser=game:service'VirtualUser'
 game:service'Players'.LocalPlayer.Idled:connect(function()
