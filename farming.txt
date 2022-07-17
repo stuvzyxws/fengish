@@ -64,6 +64,7 @@ RunService.Stepped:Connect(function()
     if target and active then
         localRootPart.CFrame = target.CFrame * CFrame.new(0, 0, 3.5)
         if localCharacter:FindFirstChildWhichIsA("Tool") then
+            localCharacter:FindFirstChildWhichIsA("Tool"):Activate()
         else
             if localHumanoid and tool then
                 localHumanoid:EquipTool(tool)
