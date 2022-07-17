@@ -1,5 +1,3 @@
-local vu = game:GetService("VirtualUser")
-
 local bruh = Instance.new('Part', game.Workspace)
 bruh.Name = "bruh"
 bruh.Size = Vector3.new(6,.1,6)
@@ -29,7 +27,6 @@ while true do
     end
     
     bruh.CFrame = game.Players.LocalPlayer.Character.LeftFoot.CFrame + Vector3.new(0,(-game.Players.LocalPlayer.Character.LeftFoot.Size.Y/2) - .05,0)
-    vu:ClickButton1(Vector2.new(), game.Workspace.CurrentCamera.CFrame)
     game:GetService("RunService").Stepped:wait()
 end
 
