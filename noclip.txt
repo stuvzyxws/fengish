@@ -26,7 +26,7 @@ while true do
         end
     end
     
-    bruh.CFrame = game.Players.LocalPlayer.Character.LeftFoot.CFrame + Vector3.new(0,(-game.Players.LocalPlayer.Character.LeftFoot.Size.Y/2) - .05,0)
+    bruh.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-3.05,0)
     game:GetService("RunService").Stepped:wait()
 end
 
