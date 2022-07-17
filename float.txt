@@ -1,0 +1,9 @@
+bruh = Instance.new('Part', game.Workspace)
+bruh.Name = "bruh"
+bruh.Size = Vector3.new(6,.1,6)
+bruh.Color = Color3.fromRGB(100,166,200)
+bruh.Anchored = true
+bruh.Transparency = 1
+while wait(.05) do
+    bruh.CFrame = game.Players.LocalPlayer.Character.LeftFoot.CFrame + Vector3.new(0,(-game.Players.LocalPlayer.Character.LeftFoot.Size.Y/2) - .05,0)
+end
