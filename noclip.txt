@@ -1,6 +1,4 @@
 local noclip = true
-local player = game.Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
 
 while true do
     player = game.Players.LocalPlayer
@@ -15,6 +13,7 @@ while true do
             end)
         end
     end
-    
+
     game:GetService("RunService").Stepped:wait()
+    
 end
