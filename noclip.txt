@@ -1,16 +1,6 @@
-local bruh = Instance.new('Part', game.Workspace)
-bruh.Name = "bruh"
-bruh.Size = Vector3.new(6,.1,6)
-bruh.Color = Color3.fromRGB(100,166,200)
-bruh.Anchored = true
-bruh.Transparency = 1
-
 local noclip = true
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
-plr = game.Players.LocalPlayer
-mouse = plr:GetMouse()
-mouse.KeyDown:connect(function(key)
 
 while true do
     player = game.Players.LocalPlayer
@@ -25,9 +15,6 @@ while true do
             end)
         end
     end
-    
-    bruh.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,-3.05,0)
-    game:GetService("RunService").Stepped:wait()
-end
-
+        game:GetService("RunService").Stepped:wait()
+    end
 end)
