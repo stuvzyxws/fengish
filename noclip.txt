@@ -1,3 +1,4 @@
+print("noclip")
 while wait() do
     for i,v in pairs(plyr.Character:GetDescendants()) do
         if v:IsA("BasePart") and v.CanCollide == true then
