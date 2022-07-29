@@ -15,6 +15,6 @@ while true do
             end)
         end
     end
-        game:GetService("RunService").Stepped:wait()
-    end
-end)
+    
+    game:GetService("RunService").Stepped:wait()
+end
