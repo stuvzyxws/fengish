@@ -1,19 +1,7 @@
-local noclip = true
-
-while true do
-    player = game.Players.LocalPlayer
-    character = player.Character
-
-    if noclip then
-        for _, v in pairs(character:GetDescendants()) do
-            pcall(function()
-                if v:IsA("BasePart") then
-                    v.CanCollide = false
-                end
-            end)
+while wait() do
+    for i,v in pairs(plyr.Character:GetDescendants()) do
+        if v:IsA("BasePart") and v.CanCollide == true then
+            v.CanCollide = false
         end
     end
-
-    game:GetService("RunService").Stepped:wait()
-    
 end
